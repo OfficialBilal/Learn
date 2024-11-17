@@ -20,10 +20,7 @@
         }
         static void Main(string[] args)
         {
-            Program P = new Program();
-            ((I1)P).InterfaceMethod();
-            ((I2)P).InterfaceMethod();
-
+           
         }
     }
 }
