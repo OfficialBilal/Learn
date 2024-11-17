@@ -1,29 +1,22 @@
-﻿namespace Learning
-{     //Explicit Interface Implimentation
-    interface I1
-    {
-        void InterfaceMethod();
-    }
-    interface I2
-    {
-        void InterfaceMethod();
-    }
-    public class Program : I1, I2
-    {
-        void I1.InterfaceMethod()
-        {
-            Console.WriteLine("I1 Interface Method");
-        }
-        void I2.InterfaceMethod()
-        {
-            Console.WriteLine("I2 Interface Method");
-        }
-        static void Main(string[] args)
-        {
-            Program P = new Program();
-            ((I1)P).InterfaceMethod();
-            ((I2)P).InterfaceMethod();
+﻿using System;
 
+namespace Learning
+{
+    public abstract class Customer
+    {
+        public abstract void Print();
+    }
+    public class Learn : Customer
+    {
+        public override void Print()
+        {
+            Console.WriteLine("Print Method");
+        }
+        public static void Main()
+        {
+            Learn P = new Learn();
+            P.Print();
         }
     }
+  
 }
