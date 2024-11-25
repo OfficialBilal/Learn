@@ -1,22 +1,40 @@
 ﻿using System;
 
-namespace Learning
+namespace Learn
 {
-    public abstract class Customer
+    public class AccessSpecifiers
     {
-        public abstract void Print();
-    }
-    public class Learn : Customer
-    {
-        public override void Print()
+        private void test1()
         {
-            Console.WriteLine("Print Method");
+            Console.WriteLine("This is Private");
         }
+        internal void test2()
+        {
+            Console.WriteLine("This is Internal");
+        }
+        protected void test3()
+        {
+            Console.WriteLine("This is Protected");
+        }
+        protected internal void test4()
+        {
+            Console.WriteLine("This is Protected Internal");
+        }
+        public void test5()
+        {
+            Console.WriteLine("This is Public");
+        }
+
         public static void Main()
         {
-            Learn P = new Learn();
-            P.Print();
+            AccessSpecifiers l = new AccessSpecifiers();
+            l.test1();
+            l.test2();
+            l.test3();
+            l.test4();
+            l.test5();
+            Console.ReadLine();
         }
     }
-  
 }
+
